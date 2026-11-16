@@ -13,6 +13,9 @@ const mcpAdapter = new MCPAdapter({
       transport: "stdio",
       command: process.execPath,
       args: [serverPath],
+      env:{
+        ...process.env
+      }
     },
   },
 });
